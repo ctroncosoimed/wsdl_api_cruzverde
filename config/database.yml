@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  host: <%= ENV['POSTGRES_PORT_5432_TCP_ADDR'] %> 
+  username: <%= ENV['POSTGRES_USERNAME'] %> 
+  password: <%= ENV['POSTGRES_PASSWORD'] %> 
+  database: <%= ENV['POSTGRES_DATABASE'] %> 
+  port: 5432
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  host: <%= ENV['POSTGRES_PORT_5432_TCP_ADDR'] %> 
+  username: <%= ENV['POSTGRES_USERNAME'] %> 
+  password: <%= ENV['POSTGRES_PASSWORD'] %> 
+  database: <%= ENV['POSTGRES_DATABASE'] %>
+  port: 5432
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  host: <%= ENV['POSTGRES_PORT_5432_TCP_ADDR'] %> 
+  username: <%= ENV['POSTGRES_USERNAME'] %> 
+  password: <%= ENV['POSTGRES_PASSWORD'] %> 
+  database: <%= ENV['POSTGRES_DATABASE'] %> 
+  port: 5432
+  timeout: 5000

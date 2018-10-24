@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build:
+      context: app
+      dockerfile: Dockerfile
+    command: bundle exec rails s -p 4000 -b '0.0.0.0'
+    environment:
+      POSTGRES_PORT_5432_TCP_ADDR: ec2-23-23-253-106.compute-1.amazonaws.com
+      POSTGRES_USERNAME: fnwpuapeedlxvl
+      POSTGRES_PASSWORD: 6d58ac134cb0a97366b3615aa10f69e66499d601e6b26f1c3f2e58aa1bceafa3
+      POSTGRES_DATABASE: d88t1tq7krube6
+    volumes:
+      - ./app:/app
+    ports:
+      - "4000:4000"
