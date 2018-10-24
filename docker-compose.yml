@@ -2,15 +2,15 @@ version: '3'
 services:
   web:
     build:
-      context: app
+      context: cruzverdeapi
       dockerfile: Dockerfile
-    command: bundle exec rails s -p 4000 -b '0.0.0.0'
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
     environment:
-      POSTGRES_PORT_5432_TCP_ADDR: ec2-23-23-253-106.compute-1.amazonaws.com
-      POSTGRES_USERNAME: fnwpuapeedlxvl
-      POSTGRES_PASSWORD: 6d58ac134cb0a97366b3615aa10f69e66499d601e6b26f1c3f2e58aa1bceafa3
-      POSTGRES_DATABASE: d88t1tq7krube6
+      POSTGRES_PORT_5432_TCP_ADDR: ec2-184-73-197-211.compute-1.amazonaws.com
+      POSTGRES_DATABASE: d14cab64gsgbvg
+      POSTGRES_USERNAME: yfwimwyujwurte
+      POSTGRES_PASSWORD: 1bd7021795c86d6ee850170c415c2ced516a10a3aeafb51a712efdd1c60e3210
     volumes:
-      - ./app:/app
+      - ./cruzverdeapi:/cruzverdeapi
     ports:
-      - "4000:4000"
+      - "3000:3000"
